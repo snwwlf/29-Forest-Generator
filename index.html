@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <link rel='stylesheet' type="text/css" href="style.css">
+
+    <title>Forest Generator</title>
+  </head>
+  <body>
+    <header>
+      
+      <div>
+        <h1><a href=index.html>Forest Generator</a></h1>
+        <h2>Make yours healthy and diverse</h2>
+      </div>
+      
+      
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='#'>Trees</a>
+            <ul>
+              <li><a href="conifers.html">Conifers</a></li>
+              <li><a href="hardwoods.html">Hardwoods</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      
+      <section id='colorChangeSection'>
+        <button id=pageColorChanger>Toggle Color Mode</button>
+      </section>
+      
+      <section id='introduction'>
+        
+        <h2>Why More Than One Type</h2>
+        
+        <p>Having a diverse range of tree species in your yard or on a larger piece of acreage is essential for fostering a healthy and resilient ecosystem. Different tree species provide a variety of benefits, such as improving soil health, supporting biodiversity, and creating habitats for various wildlife. For example, some trees may attract pollinators, while others can serve as shelter for birds and small animals. Additionally, a mix of species can help prevent the spread of diseases and pests that often target specific types of trees. Furthermore, diverse trees contribute to the aesthetic appeal of a property, offering a range of colors, shapes, and textures throughout the seasons. In larger spaces, tree diversity also ensures long-term sustainability, as different species respond differently to environmental changes, such as drought or flooding, thereby safeguarding the area against ecological challenges. This variety enhances not only the health of the land but also its ability to thrive for generations to come.</p>
+      </section>
+      
+      <section id='forestSelection'>
+        <h2>Create Your Forest</h2>
+        
+        <section id='acreSelection'>
+          
+          <ul>
+            <li>
+              <input id='number' type='number' min='0.5' step='0.5'>
+              <p>Acres (1/2 Acre Increments Only)</p>
+            </li>
+          </ul>
+          
+        </section>
+        
+        <h1 id='acreageLeft'>Remaining Space: 0 Square Feet</h1>
+        
+        <section id='treeSelection'>
+          
+          <section id='hardwoodSection'>
+            <h3>Hardwoods (Pick Up To 5)</h3>
+            <ul>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Sugar Maple (Acer saccharum) - 3,600 sqft.</label></li>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Northern Red Oak (Quercus rubra) - 2,400 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Yellow Birch (Betula alleghaniensis) - 1,500 sqft.</label></li>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>American Beech (Fagus grandifolia) - 4,000 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Basswood (Tilia americana) - 2,500 sqft.</label></li> 
+             <li><label><input class='treeNumber' type='number' min='0' step='1'>White Oak (Quercus alba) - 5,000 sqft.</label></li>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Paper Birch (Betula papyrifera) - 1,800 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Black Cherry (Prunus serotina) - 1,600 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Quaking Aspen (Populus tremuloides) - 750 sqft.</label></li>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Black Walnut (Juglans nigra) - 4,500 sqft.</label></li> 
+            </ul> 
+          </section>
+          
+          <section id='coniferSection'>
+            <h3>Conifers (Pick Up To 5)</h3>
+            <ul>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Eastern White Pine (Pinus strobus) - 1,000 sqft.</label></li>
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Red Pine (Pinus resinosa) - 500 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Northern White Cedar (Thuja occidentalis) - 225 sqft.</label> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Eastern Hemlock (Tsuga canadensis) - 1,000 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Tamarack (Larix laricina) - 225 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Balsam Fir (Abies balsamea) - 500 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Black Spruce (Picea mariana) - 144 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Jack Pine (Pinus banksiana) - 750 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>Eastern Red Cedar (Juniperas virgiana) - 400 sqft.</label></li> 
+              <li><label><input class='treeNumber' type='number' min='0' step='1'>White Spruce (Picea glauca) - 400 sqft.</label></li> 
+            </ul>
+          </section>
+
+        </section>
+        
+        <section id='button'>
+          
+          <button id='submitBtn'>Submit</button>
+          <button id='resetBtn'>Reset</button>
+          
+        </section>
+        
+      </section>
+      
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Joel Hovell Creations.</p>
+    </footer>
+    
+  </body>
+  
+</html>
